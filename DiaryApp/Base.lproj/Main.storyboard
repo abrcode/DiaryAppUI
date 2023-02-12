@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l4f-Sm-Fkj">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DiaryVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="DiaryVC" id="BYZ-38-t0r" customClass="DiaryVC" customModule="DiaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rjc-9e-E6p">
+                                <rect key="frame" x="0.0" y="88.5" width="414" height="773.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="XmR-jk-O2w"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Trr-4D-r6I"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qXa-ag-c6s">
+                                <rect key="frame" x="0.0" y="88" width="414" height="0.5"/>
+                                <color key="backgroundColor" systemColor="separatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.29999999999999999" id="LnE-uM-iov"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rjc-9e-E6p" secondAttribute="bottom" id="1Mw-dB-Ign"/>
+                            <constraint firstItem="rjc-9e-E6p" firstAttribute="top" secondItem="qXa-ag-c6s" secondAttribute="bottom" id="62D-Tl-hma"/>
+                            <constraint firstItem="rjc-9e-E6p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9rI-nC-ytp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rjc-9e-E6p" secondAttribute="trailing" id="ecJ-bW-2sw"/>
+                            <constraint firstItem="rjc-9e-E6p" firstAttribute="top" secondItem="qXa-ag-c6s" secondAttribute="bottom" id="kgw-Pq-E5d"/>
+                            <constraint firstItem="qXa-ag-c6s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mkU-HN-lje"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qXa-ag-c6s" secondAttribute="trailing" id="pMz-Gr-L4l"/>
+                            <constraint firstItem="qXa-ag-c6s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="y4p-v9-MaR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZU4-iz-jpu"/>
+                    <connections>
+                        <outlet property="tblDiary" destination="rjc-9e-E6p" id="rxT-NS-Wqp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="775" y="48"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JUC-bW-bVE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l4f-Sm-Fkj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zsu-28-CDi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="AUq-iy-tgH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GQe-J8-uH2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-196" y="48"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
